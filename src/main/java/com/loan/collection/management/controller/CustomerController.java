@@ -28,7 +28,7 @@ public class CustomerController {
     }
     @PutMapping("/{id}")
     public ResponseEntity<CustomerDAO> updateCustomer(
-            @
+            @PathVariable UUID id,
             @RequestBody CustomerDAO customerDAO
     ) {
         return customerService.updateCustomer(id, customerDAO)
